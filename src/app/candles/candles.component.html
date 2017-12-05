@@ -1,0 +1,12 @@
+<h2>Select stock exchange:</h2>
+
+
+<ul class="candles">
+  <li *ngFor="let stock of stocks"
+      [class.selected]="stock === selectedStock"
+      (click)="onSelect(stock)">
+    <span class="badge">{{stock.id}}</span> {{stock.name | uppercase}}
+  </li>
+</ul>
+
+<app-stock-details [stock]="selectedStock"></app-stock-details>
