@@ -26,6 +26,6 @@ export class CandlesComponent implements OnInit {
   }
 
   getStocks(): void {
-    this.stocks = this.stockService.getStocks();
+    this.stockService.getStocks().subscribe(stocks => this.stocks = stocks);
   }
 }

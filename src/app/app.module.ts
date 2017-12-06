@@ -9,6 +9,8 @@ import {UsersComponent} from './users/users.component';
 import {StockDetailsComponent} from './stock-details/stock-details.component';
 import {StockService} from "./stock.service";
 import {MessageService} from './message.service';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -16,11 +18,13 @@ import {MessageService} from './message.service';
     AppComponent,
     CandlesComponent,
     UsersComponent,
-    StockDetailsComponent
+    StockDetailsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [StockService, MessageService],
   bootstrap: [AppComponent]
